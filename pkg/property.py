@@ -20,7 +20,7 @@ class GProperty(Property):
         Property.__init__(self, device, name, propertyDescription)
         self.device = device
         self.unit = propertyDescription['unit']
-        self.description = propertyDescription['description']
+        self.description = propertyDescription
         self.value = propertyDescription['value']
         self.set_cached_value(self.value)
         #self.device.notify_property_changed(self)
