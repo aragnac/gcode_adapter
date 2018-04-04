@@ -1,0 +1,39 @@
+{
+  "name": "gcodeAdapter",
+  "version": "0.3.1",
+  "description": "gcode adapter plugin for Mozilla IoT Gateway",
+  "main": "adapter.py",
+  "keywords": [
+    "mozilla",
+    "iot",
+    "adapter",
+    "gcode"
+  ],
+  "homepage": "",
+  "license": "MPL-2.0",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "bugs": {
+    "url": ""
+  },
+  "files": [
+    "LICENSE",
+    "SHA256SUMS",
+    "lib",
+    "main.py",
+    "pkg/__init__.py",
+    "pkg/adapter.py",
+    "pkg/device.py",
+    "pkg/property.py"
+  ],
+  "moziot": {
+    "api": {
+      "min": 1,
+      "max": 1
+    },
+    "plugin": true,
+    "exec": "python3 {path}/main.py"
+  }
+}

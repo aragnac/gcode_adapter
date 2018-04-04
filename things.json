@@ -1,0 +1,59 @@
+{
+  "name":"MarlinPrinter",
+  "type": "3DPrinter",
+  "description": "A custom 3D printer working with marlin firmware",
+  "properties": {
+    "connection": {
+      "type": "boolean",
+      "unit": "",
+      "description": "wether the device is connected or not",
+      "value": "false"
+    },
+    "x_axes" : {
+      "type": "number",
+      "unit": "mm",
+      "description": "The distance to run",
+      "value": 10
+    },
+    "y_axes" : {
+      "type": "number",
+      "unit": "mm",
+      "description": "The distance to run",
+      "value": 10
+    },
+    "z_axes" : {
+      "type": "number",
+      "unit": "mm",
+      "description": "The distance to run",
+      "value": 10
+    }
+  },
+  "actions": {
+    "fade": {
+      "description": "Fade the lamp to a given level",
+      "input": {
+        "type": "object",
+        "properties": {
+          "level": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 100
+          },
+          "duration": {
+            "type": "number",
+            "unit": "milliseconds"
+          }
+        }
+      },
+      "href": "/things/lamp/actions/fade"
+    }
+  },
+  "events": {
+    "overheated": {
+      "type": "number",
+      "unit": "celcius",
+      "description": "The lamp has exceeded its safe operating temperature",
+      "href": "/things/lamp/events/overheated"
+    }
+  }
+}
