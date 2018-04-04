@@ -47,7 +47,7 @@ class GcodeAdapter(Adapter):
             print('Device: ' + deviceId + ' already exists.')
             return False
         else:
-            device = GDevice(self, deviceId, deviceDescription)
+            device = GDevice(self, deviceId, deviceDescription, self.octopi)
             self.handle_device_added(device)
             print('Device: ' + deviceId + 'added')
             return True

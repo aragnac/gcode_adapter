@@ -5,10 +5,11 @@ from .property import GProperty
 
 
 class GDevice(Device):
-    def __init__(self, adapter, _id, deviceDescription):
+    def __init__(self, adapter, _id, deviceDescription, octopi):
 
         Device.__init__(self, adapter, _id)
 
+        self.octopi = octopi
         self.name = deviceDescription['name']
         self.type = deviceDescription['type']
         self.description = deviceDescription
